@@ -1,0 +1,26 @@
+<div class="card">
+    <h5 class="card-header">{{title}}</h5>
+    <div class="card-body">
+        <h5 class="card-title">Dados da Inscrição</h5>
+        <a href="/form" class="btn btn-success">Adicionar</a>
+        <br><br>
+        {{#each carro}}
+        <div class="card">
+            <div class="card-body">
+                <h5>Id: {{ this.id }}</h5>
+                <hr>
+                <p>Distancia: {{ this.distance }}</p>
+                <p>Consumo: {{ this.consume }}</p>
+                <p>Velocidade: {{ this.speed }}</p>
+                <p>Possui Ar condicionado: {{ this.ac }}</p>
+                <a href="/delete/{{ this.id }}" class="btn btn-danger"
+                    onclick="return confirm('Confirma a exclusão do registro?')">Excluir</a>
+                <a href="/edit/{{ this.id }}" class="btn btn-primary">Editar</a>
+            </div>
+        </div>
+        <br>
+        {{else}}
+        <p>Nenhum registro encontrado!</p>
+    </div>
+    {{/each}}
+</div>

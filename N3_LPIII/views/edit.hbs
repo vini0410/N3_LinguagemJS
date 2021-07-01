@@ -1,0 +1,27 @@
+<div class="card">
+    <h5 class="card-header">{{title}}</h5>
+    <div class="card-body">
+        <h5 class="card-title">Dados da Inscrição</h5>
+        <form action="/edition/{{ id }}" method="post">
+            <div class="mb-3">
+                <label for="distance" class="form-label">Distancia:</label>
+                <input type="text" class="form-control" id="distance" name="distance" value="{{ distance }}">
+            </div>
+            <div class="mb-3">
+                <label for="consume" class="form-label">Consumo:</label>
+                <input type="text" class="form-control" id="consume" name="consume" value="{{ consume }}">
+            </div>
+            <div class="mb-3">
+                <label for="speed" class="form-label">Velocidade:</label>
+                <input type="text" class="form-control" id="speed" name="speed" value="{{ speed }}">
+            </div>
+            <div class="mb-3">
+                <label for="ac" class="form-label">Possui Ar Condicionado:</label>
+                <input type="text" class="form-control" id="ac" name="ac" value="{{ ac }}">
+            </div>
+            <a href="/list" class="btn btn-primary">Cancelar</a>
+            <button type="submit" class="btn btn-success">Salvar</button>
+    </div>
+    </form>
+</div>
+</div>
